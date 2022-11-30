@@ -1,0 +1,19 @@
+.home__container {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.categoryName {
+    font-family: var(--raleway);
+    font-size: 42px;
+    font-weight: 400;
+    text-transform: capitalize;
+}
+
+.items__container {
+    margin-top: 103px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 3%;
+    row-gap: 103px;
+}

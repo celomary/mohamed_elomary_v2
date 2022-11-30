@@ -1,0 +1,70 @@
+@keyframes toRight {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(100px);
+    }
+}
+
+.message__container {
+    display: flex;
+    height: 80px;
+    overflow: hidden;
+    align-items: center;
+    min-width: 300px;
+    width: fit-content;
+    padding-right: 15px;
+    border-radius: 6px;
+    gap: 25px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    text-transform: capitalize;
+    background-color: #ffffff;
+    animation-name: toRight;
+    animation-duration: 1s;
+    transform: translateX(100px);
+}
+
+.message__container__left {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    gap: 25px;
+}
+.message__container__left img {
+    width: 40px;
+    height: 40px;
+}
+
+.message__vertical__line {
+    height: 100%;
+    width: 10px;
+}
+
+.message__container__right {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.message__container__right h2 {
+    font-family: var(--roboto-condensed);
+    font-size: 20px;
+    font-weight: bold;
+    color: #121212;
+}
+
+.message__container__right p {
+    font-family: var(--raleway);
+    font-weight: 600;
+    font-size: 14px;
+    color: #777;
+}
+
+.message__info .message__vertical__line {
+    background-color: #38b6ff;
+}
+
+.message__success .message__vertical__line {
+    background-color: #5ece7b;
+}

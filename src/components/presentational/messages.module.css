@@ -1,0 +1,9 @@
+.messages__container {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    z-index: 999;
+    pointer-events: none;
+    top: 100px;
+}

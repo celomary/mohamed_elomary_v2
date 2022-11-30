@@ -1,0 +1,56 @@
+.attributeName {
+    font-family: var(--raleway);
+    font-size: 14px;
+    font-weight: 400;
+    margin-top: 6px;
+}
+
+.swatchAttribute {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #1d1f22;
+}
+
+.swatchAttribute__selected {
+    border-color: #5ece7b;
+}
+
+.swatchAttribute__clickable {
+    cursor: pointer;
+}
+
+.swatchAttribute__clickable:hover {
+    border-color: #5ece7b;
+}
+
+.attributeValues {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 8px;
+}
+
+.textAttribute {
+    font-family: var(--source-sans-pro);
+    font-weight: 400;
+    border: 1px solid #1d1f22;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 6px;
+}
+
+.textAttribute__selected {
+    background-color: #1d1f22;
+    color: #fff;
+}
+
+.textAttribute__clickable {
+    cursor: pointer;
+}
+
+.textAttribute__clickable:hover {
+    background-color: #1d1f22;
+    color: #fff;
+}

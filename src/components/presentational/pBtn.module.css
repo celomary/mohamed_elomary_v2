@@ -1,0 +1,25 @@
+.pBtn__container {
+    cursor: pointer;
+    border: none;
+    background-color: #5ece7b;
+    font-family: var(--raleway);
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #fff;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.pBtn__small {
+    font-size: 14px;
+    padding: 13px 0;
+}
+
+.pBtn__large {
+    font-size: 16px;
+    padding: 16px 0;
+}
+
+.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
