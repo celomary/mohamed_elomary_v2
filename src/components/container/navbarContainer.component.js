@@ -6,6 +6,7 @@ import { CLOSE, TOGGLE } from '../../utils/status';
 import { connect } from 'react-redux';
 import { withLocation } from '../../utils';
 import { updateCurrencyService } from '../../services/config.service';
+
 class CNavbar extends PureComponent {
     constructor(props) {
         super(props);
@@ -15,15 +16,15 @@ class CNavbar extends PureComponent {
         };
     }
 
-    setStatusCart = (status) => {
+    setStatus = (status, element) => {
         switch (status) {
             case CLOSE:
-                this.setState((state) => ({ ...state, isCartOpen: false }));
+                this.setState((state) => ({ ...state, [element]: false }));
                 break;
             case TOGGLE:
                 this.setState((state) => ({
                     ...state,
-                    isCartOpen: !state.isCartOpen
+                    [element]: !state.isCartOpen
                 }));
                 break;
             default:
@@ -32,21 +33,12 @@ class CNavbar extends PureComponent {
         return true;
     };
 
+    setStatusCart = (status) => {
+        this.setStatus(status, 'isCartOpen');
+    };
+
     setStatusCurrency = (status) => {
-        switch (status) {
-            case CLOSE:
-                this.setState((state) => ({ ...state, isCurrencyOpen: false }));
-                break;
-            case TOGGLE:
-                this.setState((state) => ({
-                    ...state,
-                    isCurrencyOpen: !state.isCurrencyOpen
-                }));
-                break;
-            default:
-                return false;
-        }
-        return true;
+        this.setStatus(status, 'isCurrencyOpen');
     };
 
     currentCategory = () => {
